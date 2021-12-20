@@ -47,11 +47,11 @@ public class Config {
         ////////////////////////
         // Messages
         ////////////////////////
-        lostRandomResearch = config.getString("messages.lost-random-research", "&cYou lost a random research!");
-        lostAllResearch = config.getString("messages.lost-all-research", "&cYou lost all your research!");
-        researchFailed = config.getString("messages.research-failed", "&cResearch failed!");
+        lostRandomResearch = config.getString("messages.lost-random-research", "&c你丢失了一个已解锁的研究!");
+        lostAllResearch = config.getString("messages.lost-all-research", "&c你丢失了所有研究!");
+        researchFailed = config.getString("messages.research-failed", "&c研究失败!");
         androidMalfunctioned = config.getString("messages.android-malfunctioned",
-            "&cYour Android has malfunctioned! Let it cool down and start it again");
+            "&c你的机器人出了点故障! 它将在一段时间后恢复工作.");
     }
 
     private double getPercent(@Nonnull FileConfiguration config, @Nonnull String path, double defaultValue) {

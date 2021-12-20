@@ -33,7 +33,7 @@ public class HardcoreSlimefun extends JavaPlugin {
         Config.INSTANCE.load(this.getConfig());
 
         if (getServer().getPluginManager().getPlugin("Slimefun") == null) {
-            getLogger().severe("Slimefun not found! Disabling plugin...");
+            getLogger().severe("你没有安装 Slimefun! 本插件将不会启用...");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
