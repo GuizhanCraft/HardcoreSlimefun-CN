@@ -21,6 +21,7 @@ android:
 
 # 提示消息
 messages:
+  # 可使用 %research% 来展示丢失研究的名字
   lost-random-research: '&c你丢失了一个已解锁的研究!'
   lost-all-research: '&c哦不!你丢失了所有的研究!'
   research-failed: '&c研究失败! 你需要再试一次 :^)'
