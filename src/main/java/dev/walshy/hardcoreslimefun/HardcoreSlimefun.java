@@ -3,7 +3,7 @@ package dev.walshy.hardcoreslimefun;
 import dev.walshy.hardcoreslimefun.events.AndroidEvents;
 import dev.walshy.hardcoreslimefun.events.Events;
 import dev.walshy.hardcoreslimefun.utils.Config;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nullable;
@@ -38,8 +38,9 @@ public class HardcoreSlimefun extends JavaPlugin {
             return;
         }
 
-        if (getConfig().getBoolean("auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "Slimefun-Addon-Community/HardcoreSlimefun/main", "DEV").start();
+        if (getConfig().getBoolean("auto-update") &&
+            getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "HardcoreSlimefun-CN", "main", false).start();
         }
 
         new HardcoreMetrics(this).start();

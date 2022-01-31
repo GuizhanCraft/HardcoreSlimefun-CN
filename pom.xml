@@ -44,11 +44,6 @@
             <artifactId>dough-common</artifactId>
             <version>1.1.1</version>
         </dependency>
-        <dependency>
-            <groupId>io.github.baked-libs</groupId>
-            <artifactId>dough-updater</artifactId>
-            <version>1.1.1</version>
-        </dependency>
 
         <dependency>
             <groupId>org.bstats</groupId>
@@ -68,11 +63,18 @@
             <version>1.18.22</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLib</artifactId>
+            <version>0.5.1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <defaultGoal>clean package</defaultGoal>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${project.name}-${project.version}</finalName>
         <sourceDirectory>src/main/java</sourceDirectory>
         <resources>
             <resource>
@@ -100,6 +102,7 @@
                 <version>2.3</version>
 
                 <configuration>
+                    <minimizeJar>true</minimizeJar>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
                     <relocations>
                         <relocation>
@@ -110,7 +113,21 @@
                             <pattern>org.bstats</pattern>
                             <shadedPattern>dev.walshy.hardcoreslimefun.bstats</shadedPattern>
                         </relocation>
+                        <relocation>
+                            <pattern>net.guizhanss.guizhanlib</pattern>
+                            <shadedPattern>dev.walshy.hardcoreslimefun.guizhanlib</shadedPattern>
+                        </relocation>
                     </relocations>
+
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*</exclude>
+                                <exclude>minecraft.*</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
                 </configuration>
 
                 <executions>

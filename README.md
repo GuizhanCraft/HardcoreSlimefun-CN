@@ -8,6 +8,8 @@
 
 ## 下载
 
+**自动更新**: 汉化版构建#4及以上版本包含自动更新功能，默认开启。
+
 点击这里下载 HardcoreSlimefun: [下载 HardcoreSlimefun](https://builds.guizhanss.net/ybw0014/HardcoreSlimefun-CN/main)
 
 <p align="center">
@@ -26,7 +28,7 @@
 
 ```yaml
 # 开启自动更新
-auto-update: false
+auto-update: true
 on-death:
   # 设置为true时，玩家将在死亡时丢失一个随机研究
   reset-random-research: true

@@ -1,5 +1,5 @@
 # 开启自动更新
-auto-update: false
+auto-update: true
 on-death:
   # 设置为true时，玩家将在死亡时丢失一个随机研究
   reset-random-research: true
