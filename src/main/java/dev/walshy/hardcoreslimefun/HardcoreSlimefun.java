@@ -40,7 +40,7 @@ public class HardcoreSlimefun extends JavaPlugin {
 
         if (getConfig().getBoolean("auto-update") &&
             getDescription().getVersion().startsWith("Build")) {
-            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "HardcoreSlimefun-CN", "main", false).start();
+            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "HardcoreSlimefun", "main", false).start();
         }
 
         new HardcoreMetrics(this).start();
